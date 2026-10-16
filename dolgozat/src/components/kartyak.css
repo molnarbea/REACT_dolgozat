@@ -5,3 +5,10 @@
     justify-content: center;
     gap: 10px;
 }
+
+.kartya button{
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 25px;
+}

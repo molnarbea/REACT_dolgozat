@@ -5,7 +5,7 @@ export interface TanuloszobakTipus{
     emelet: number
     ferohely: number
     foglalt: number
-    tele: boolean
+    gomb: string
 }
 
 export const TANULOSZOBAKLISTA: TanuloszobakTipus[] = [{
@@ -15,7 +15,7 @@ export const TANULOSZOBAKLISTA: TanuloszobakTipus[] = [{
     emelet: 1,
     ferohely: 12,
     foglalt: 7,
-    tele: false
+    gomb: "Helyet foglalok"
     },
     {id: 2,
     megnevezes: "Közös ötletelő",
@@ -23,7 +23,7 @@ export const TANULOSZOBAKLISTA: TanuloszobakTipus[] = [{
     emelet: 2,
     ferohely: 20,
     foglalt: 11,
-    tele: false
+    gomb: "Helyet foglalok"
     },
     {id: 3,
     megnevezes: "Digitális műhely",
@@ -31,6 +31,6 @@ export const TANULOSZOBAKLISTA: TanuloszobakTipus[] = [{
     emelet: 3,
     ferohely: 16,
     foglalt: 9,
-    tele: false
+    gomb: "Helyet foglalok"
     }
 ]

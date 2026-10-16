@@ -15,11 +15,20 @@ function App() {
       modositottLista[index].foglalt += 1
       setLista(modositottLista)
     }
+    if(lista[index].ferohely == lista[index].foglalt)
+    {
+      const modositottLista: TanuloszobakTipus[] = [...lista]
+      modositottLista[index].gomb = "MEGTELT"
+      setLista(modositottLista)
+    }
   }
   return (
     <>
-      <header>TANULOSZOBÁK</header>
+      <header>
+        <h1>TANULÓSZOBÁK</h1>
+      </header>
       <article><Kartyak lista={TANULOSZOBAKLISTA} kivalaszt={kivalaszt} /></article>
+      <footer>Molnár Beatrix</footer>
     </>
   )
 }

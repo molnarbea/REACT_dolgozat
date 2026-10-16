@@ -12,12 +12,13 @@ export default function Kartya({kartyam, index, kivalaszt}:KartyaProps){
         <>
             <div className="kartya">
                 <h2>{kartyam.megnevezes}</h2>
-                <p>ID   {kartyam.szobatipus}</p>
-                <p>Szobatípus   {kartyam.id}</p>
-                <p>Emelet   {kartyam.emelet}</p>
-                <p>Férőhely {kartyam.ferohely} fő</p>
-                <p>Foglalt helyek   {kartyam.foglalt} fő</p>
-                <button onClick={() => kivalaszt(index)}>Helyet foglalok</button>
+                <h3>{kartyam.szobatipus}</h3>
+                <p>ID:   {kartyam.id}</p>
+                <p>Szobatípus:   {kartyam.szobatipus}</p>
+                <p>Emelet:   {kartyam.emelet}</p>
+                <p>Férőhely: {kartyam.ferohely} fő</p>
+                <p>Foglalt helyek:   {kartyam.foglalt} fő</p>
+                <button onClick={() => kivalaszt(index)} disabled={kartyam.ferohely <= kartyam.foglalt}>{kartyam.gomb} </button>
             </div>
 
         </>
