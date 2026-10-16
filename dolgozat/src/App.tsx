@@ -1,12 +1,10 @@
-
-import { useState } from 'react'
-import { TANULOSZOBAKLISTA, type TanuloszobakTipus } from './adat'
 import './App.css'
 import Kartyak from './components/Kartyak'
+import { useKartyaContext } from './contexts/KartyaContext'
 
 function App() {
 
-  const [lista, setLista] = useState(TANULOSZOBAKLISTA)
+  /*const [lista, setLista] = useState(TANULOSZOBAKLISTA)
 
   function kivalaszt(index: number){
     console.log(index)
@@ -21,13 +19,15 @@ function App() {
       modositottLista[index].gomb = "MEGTELT"
       setLista(modositottLista)
     }
-  }
+  }*/
+
+    const {lista} = useKartyaContext();
   return (
     <>
       <header>
         <h1>TANULÓSZOBÁK</h1>
       </header>
-      <article><Kartyak lista={TANULOSZOBAKLISTA} kivalaszt={kivalaszt} /></article>
+      <article><Kartyak lista={lista}  /></article>
       <footer>Molnár Beatrix</footer>
     </>
   )

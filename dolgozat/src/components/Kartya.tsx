@@ -1,13 +1,15 @@
 import type { TanuloszobakTipus } from "../adat";
+import { useKartyaContext } from "../contexts/KartyaContext";
 import './kartya.css'
 
 interface KartyaProps{
     kartyam: TanuloszobakTipus,
-    index: number,
-    kivalaszt: (index:number) => void
+    index: number
 }
 
-export default function Kartya({kartyam, index, kivalaszt}:KartyaProps){
+export default function Kartya({kartyam, index}:KartyaProps){
+
+    const {kivalaszt} = useKartyaContext();
     return(
         <>
             <div className="kartya">
